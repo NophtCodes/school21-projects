@@ -1,5 +1,6 @@
 ## Part 1. Установка OC
-- Выводим версию ubuntu с помощью команды cat/etc/issue![alt text](images/part1.png)
+- Выводим версию ubuntu с помощью команды cat/etc/issue
+- ![alt text](images/part1.png)
 ## Part 2. Создание пользователя
 - создание нового пользователя через sudo useradd -g имя_группы username
 ![alt text](images/part2_1.png)
