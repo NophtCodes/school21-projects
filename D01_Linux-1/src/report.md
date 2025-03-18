@@ -151,12 +151,25 @@
 - ncdu /var/log
 ![alt text](images/part13_3.png)
 ## Part 14. Работа с системными журналами
-![alt text](images/part14_1.png)
-![alt text](images/part14_2.png)
-![alt text](images/part14_3.png)
-![alt text](images/part14_4.png)
-![alt text](images/part14_5.png)
+- cat /var/log/dmesg
+- ![alt text](images/part14_1.png)
+- cat /var/log/syslog
+- ![alt text](images/part14_2.png)
+- cat /var/log/auth.log
+- Jan 28 23:17:01 s21-user CRON[21438]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+- Время: 28 января 23:17:01
+- Имя: root
+- Метод: pam_unix
+- ![alt text](images/part14_3.png)
+- sudo grep "Accepted" /var/log/auth.log | tail -n 1
+- ![alt text](images/part14_4.png)
+- рестарт службы systemctl restart sshd
+- ![alt text](images/part14_5.png)
 ## Part 15. Использование планировщика заданий CRON
-![alt text](images/part15_1.png)
-![alt text](images/part15_2.png)
-![alt text](images/part15_3.png)
+- добавляем исполнение uptime каждые 2 мин
+- ![alt text](images/part15_1.png)
+- проверка "crontab -l"
+- ![alt text](images/part15_2.png)
+- логи о выполнении cron
+- ![alt text](images/part15_3.png)
+- "crontab -r" > "crontab -l" для очистки заданий
